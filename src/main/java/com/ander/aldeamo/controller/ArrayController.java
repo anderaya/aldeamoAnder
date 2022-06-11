@@ -32,12 +32,9 @@ public class ArrayController {
 	public ResponseEntity<Array> traerTodos(@RequestParam int idprestamo,@RequestParam int iteraciones) {
 		
 		Array resultado=service.resolver(idprestamo,iteraciones);
-
 		if(resultado!=null) {
 			return ResponseEntity.ok(resultado);
 		}
-		
-	
 		return ResponseEntity.notFound().build();
 	}
 	
